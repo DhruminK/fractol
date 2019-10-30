@@ -6,7 +6,7 @@
 #    By: dkhatri <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/18 15:10:07 by dkhatri           #+#    #+#              #
-#    Updated: 2019/03/22 17:44:12 by dkhatri          ###   ########.fr        #
+#    Updated: 2019/10/30 19:10:19 by dkhatri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ all: $(NAME)
 
 $(NAME): $(SRCO)
 	make -C libft
-	gcc -o $(NAME) $(SRCO) -L libft/ -lft -L /usr/local/lib -lmlx \
+	gcc -o $(NAME) $(SRCO) -L libft/ -lft \
+		-L./minilibx_macos -lmlx \
 		-framework OpenGL -framework AppKit
 
 clean :
