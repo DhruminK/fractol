@@ -30,7 +30,7 @@ SRCO = $(addprefix $(SRCDIR), $(PARSOR:.c=.o)) \
 DEPS = ./includes/fractol.h ./libft/libft.h
 
 %.o: %.c $(DEPS)
-	gcc $(FLAGS) -o $@ -c $<
+	gcc -I./minilibx_macos/ $(FLAGS) -o $@ -c $<
 
 all: $(NAME)
 
